@@ -1,0 +1,395 @@
+/* -------- BASE (Mobile First - up to 480px) -------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Merriweather', sans-serif;
+    line-height: 1.4; /* Reduzido para espaçamento mais compacto */
+    color: #333;
+    background-color: #F5F5F5;
+}
+
+a {
+    text-decoration: none;
+    color: #0066cc;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Espaçamento reduzido para manter textos próximos */
+}
+
+h1 {
+    font-size: 1.75rem; /* Aumentado para maior impacto */
+    margin: 10px 0;
+    color: #333;
+    font-weight: 700;
+}
+
+.header p {
+    font-size: 1rem; /* Aumentado para legibilidade */
+    margin: 8px 0;
+    color: #fff;
+    background-color: #e21010; /* Fundo vermelho para destacar */
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.header #amoreluz {
+    color: #fff;
+    font-family: 'Dancing Script', sans-serif;
+    font-size: 1.25rem; /* Aumentado para destaque */
+    font-weight: 700;
+    margin: 8px 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px; /* Bordas arredondadas para visual moderno */
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e21010; /* Vermelho vibrante para CTA */
+    color: #fff;
+    padding: 14px 28px; /* Aumentado para maior impacto */
+    font-size: 1rem; /* Aumentado para legibilidade */
+    margin: 15px auto;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 90%;
+    max-width: 360px; /* Aumentado para maior destaque */
+    text-align: center;
+    font-weight: 700;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+}
+
+.button:hover {
+    background-color: #34ff34; /* Verde chamativo no hover */
+    color: #000;
+    transform: scale(1.05); /* Efeito de zoom suave */
+}
+
+.button span {
+    display: block;
+    opacity: 0.8;
+    font-weight: normal;
+    font-size: 0.9rem;
+    line-height: 1.2;
+}
+
+.divider {
+    border-top: 2px solid #ccc; /* Mais grosso para maior destaque */
+    margin: 15px 0;
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+    max-width: 600px;
+    margin: 10px auto;
+}
+
+ul li {
+    font-size: 1rem; /* Aumentado para legibilidade */
+    margin-bottom: 8px; /* Espaçamento reduzido */
+    padding-left: 35px;
+    position: relative;
+    font-weight: 500;
+}
+
+ul li::before {
+    content: '✔';
+    color: #30a05c;
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px; /* Aumentado para melhor separação */
+    justify-items: center;
+    width: 100%;
+}
+
+.gallery div {
+    text-align: center;
+    width: 100%;
+}
+
+.testimonials {
+    margin-top: 30px;
+    width: 100%;
+    background-color: #e6f0fa; /* Fundo azul claro para depoimentos */
+    padding: 20px 15px;
+    border-radius: 8px;
+}
+
+.testimonials h2 {
+    font-size: 1.25rem; /* Aumentado para destaque */
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+    font-weight: 700;
+}
+
+.testimonials p {
+    font-size: 1rem;
+    margin: 8px 0;
+    color: #333;
+}
+
+.testimonials .gallery {
+    grid-template-columns: 1fr; /* Uma coluna em mobile */
+}
+
+.testimonials .gallery div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.testimonials .gallery img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.features, .faq, .footer {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.features h2, .faq h2, .footer h2 {
+    font-size: 1.25rem; /* Aumentado para destaque */
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+    font-weight: 700;
+}
+
+.faq h3 {
+    font-size: 1rem; /* Aumentado */
+    margin: 15px 0 8px;
+    color: #333;
+    text-align: left;
+    font-weight: 600;
+}
+
+.footer {
+    text-align: center;
+    background-color: #f1f1f1; /* Fundo suave para o footer */
+    padding: 20px 15px;
+    border-radius: 8px;
+}
+
+.footer p {
+    font-size: 0.875rem; /* Aumentado */
+    color: #666;
+    margin: 8px 0;
+}
+
+.footer a {
+    color: #0066cc;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.footer a:hover {
+    text-decoration: none;
+}
+
+/* -------- Tablets (min-width: 481px) -------- */
+@media (min-width: 481px) {
+    .container {
+        padding: 20px;
+        gap: 12px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .header p {
+        font-size: 1.125rem;
+    }
+
+    .header #amoreluz {
+        font-size: 1.5rem;
+    }
+
+    .button {
+        font-size: 1.125rem;
+        padding: 16px 32px;
+        width: 80%;
+        max-width: 400px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    ul li {
+        font-size: 1.125rem;
+    }
+
+    .testimonials h2, .features h2, .faq h2, .footer h2 {
+        font-size: 1.5rem;
+    }
+
+    .faq h3 {
+        font-size: 1.125rem;
+    }
+
+    .footer p {
+        font-size: 1rem;
+    }
+}
+
+/* -------- Laptops (min-width: 768px) -------- */
+@media (min-width: 768px) {
+    .container {
+        max-width: 900px; /* Aumentado para melhor distribuição */
+        padding: 30px;
+        gap: 15px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .button {
+        font-size: 1.25rem;
+        padding: 18px 36px;
+        max-width: 450px; /* Aumentado para maior impacto */
+        margin: 20px auto; /* Melhor distribuição dos CTAs */
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* Mantido 2 colunas para melhor layout */
+        gap: 25px;
+    }
+
+    .testimonials .gallery {
+        grid-template-columns: repeat(2, 1fr); /* Duas colunas para depoimentos */
+        gap: 30px;
+        align-items: stretch;
+    }
+
+    .testimonials .gallery div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff; /* Fundo branco para contraste no azul */
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .testimonials .gallery img {
+        max-width: 90%;
+        margin-bottom: 15px;
+    }
+
+    .testimonials h2, .features h2, .faq h2, .footer h2 {
+        font-size: 1.75rem;
+    }
+
+    .faq h3 {
+        font-size: 1.25rem;
+    }
+
+    .footer p {
+        font-size: 1.125rem;
+    }
+}
+
+/* -------- Desktop (min-width: 1200px) -------- */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1100px; /* Aumentado para melhor aproveitamento */
+        padding: 40px;
+        gap: 20px;
+    }
+
+    .container img {
+        max-width: 50%; /* Aumentado para maior impacto visual */
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 3rem; /* Aumentado para destaque */
+    }
+
+    .header p {
+        font-size: 1.25rem;
+    }
+
+    .header #amoreluz {
+        font-size: 1.75rem;
+    }
+
+    .button {
+        font-size: 1.5rem;
+        padding: 20px 40px;
+        max-width: 500px; /* Aumentado para maior impacto */
+        margin: 25px auto; /* Melhor espaçamento entre CTAs */
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* Mantido 2 colunas para equilíbrio */
+        gap: 30px;
+    }
+
+    .testimonials .gallery {
+        grid-template-columns: repeat(2, 1fr); /* Duas colunas para depoimentos */
+        gap: 40px;
+    }
+
+    .testimonials .gallery img {
+        max-width: 85%;
+    }
+
+    ul li {
+        font-size: 1.25rem;
+    }
+
+    .testimonials h2, .features h2, .faq h2, .footer h2 {
+        font-size: 2rem;
+    }
+
+    .faq h3 {
+        font-size: 1.5rem;
+    }
+
+    .footer p {
+        font-size: 1.25rem;
+    }
+}
